@@ -1,10 +1,14 @@
+import { useState, useEffect } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      baref!!!
-    </div>
-  );
-}
+  function Shop() {
+    const [goods, setGoods] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-export default App;
+    return (
+      <main className="container content">
+        Shop
+      </main>
+    );
+  }
+
+export { Shop };
