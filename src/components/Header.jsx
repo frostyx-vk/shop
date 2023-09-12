@@ -4,7 +4,7 @@ function Header() {
           <a href="#">Shop on React</a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                  <a href="https://github.com/frostyx-vk/movies-project">
+                  <a href="https://github.com/frostyx-vk/shop">
                       Repositoriy
                   </a>
               </li>
