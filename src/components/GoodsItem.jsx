@@ -20,7 +20,7 @@ function GoodsItem(props) {
         <button className="btn" >Купить</button>
         {
           [price].map(price => {
-            return <span className="right">{price.finalPrice}</span>
+            return <span className="right">{price.finalPrice} руб.</span>
           })
         }
       </div>

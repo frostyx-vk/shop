@@ -26,3 +26,19 @@ code {
   grid-gap: 1rem;
   gap: 1rem;
 }
+.right{
+  font-size: 1.6rem;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+}
+.card-content{
+  flex-grow: 1;
+}
+.btn, .btn-large, .btn-small{
+  background-color: #90caf9;
+}
+.progress{
+  background-color: #90caf9;
+}
