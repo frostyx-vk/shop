@@ -8,11 +8,7 @@ function BasketItem(props) {
 
     return (
         <li className="collection-item">
-            {displayName} x{quantity} = {
-                [price].map(price => {
-                    return <span className="right">{price.finalPrice} руб.</span>
-                })
-            }
+            {displayName} x{quantity}
             <span className="secondary-content">
                 <i className="material-icons">
                     close
