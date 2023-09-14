@@ -1,9 +1,25 @@
 function BasketItem(props) {
-    return (
-        <div className="">
+    const {
+        mainId,
+        displayName,
+        price,
+        quantity,
+    } = props;
 
-        </div>
-    )
+    return (
+        <li className="collection-item">
+            {displayName} x{quantity} = {
+                [price].map(price => {
+                    return <span className="right">{price.finalPrice} руб.</span>
+                })
+            }
+            <span className="secondary-content">
+                <i className="material-icons">
+                    close
+                </i>
+            </span>
+        </li>
+    );
 }
 
-export { BasketItem }
+export { BasketItem }   
