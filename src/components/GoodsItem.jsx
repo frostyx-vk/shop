@@ -18,7 +18,7 @@ function GoodsItem(props) {
         <p>{displayDescription}</p>
       </div>
       <div className="card-action">
-        <button onClick={() => addToCart({mainId, displayName})} className="btn" >Купить</button>
+        <button onClick={() => addToCart({ mainId, displayName, price })} className="btn" >Купить</button>
         {
           [price].map(price => {
             return <span className="right">{price.finalPrice} руб.</span>

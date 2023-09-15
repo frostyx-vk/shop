@@ -12,9 +12,8 @@ function Shop() {
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState([false]);
 
-  const addToCart = (item)=> {
-    const itemIndex = order.findIndex(orderItem => orderItem.id === item.id)
-
+  const addToCart = (item) => {
+    const itemIndex = order.findIndex(orderItem => orderItem.mainId === item.mainId)
     if (itemIndex < 0) {
       const newItem = {
         ...item,
@@ -56,9 +55,9 @@ function Shop() {
 
   return (
     <main className="container content">
-      <Cart quantity={order} handleBasketShow={handleBasketShow} />
+      <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
       {loading ? <Preloader /> : <GoodsList goods={goods} addToCart={addToCart} />}
-      { isBasketShow && <BasketList order={order} /> }
+      {isBasketShow && <BasketList order={order} />}
     </main>
   );
 }

@@ -8,7 +8,7 @@ function BasketItem(props) {
 
     return (
         <li className="collection-item">
-            {displayName} x{quantity}
+            {displayName} x{quantity} = {price.finalPrice}
             <span className="secondary-content">
                 <i className="material-icons">
                     close
