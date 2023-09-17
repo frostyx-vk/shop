@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.3482a1ad.css",
-    "main.js": "/static/js/main.3b7d2ac5.js",
-    "index.html": "/index.html",
-    "main.3482a1ad.css.map": "/static/css/main.3482a1ad.css.map",
-    "main.3b7d2ac5.js.map": "/static/js/main.3b7d2ac5.js.map"
+    "main.css": "/frostyx-vk/shop/static/css/main.3482a1ad.css",
+    "main.js": "/frostyx-vk/shop/static/js/main.3b7d2ac5.js",
+    "index.html": "/frostyx-vk/shop/index.html",
+    "main.3482a1ad.css.map": "/frostyx-vk/shop/static/css/main.3482a1ad.css.map",
+    "main.3b7d2ac5.js.map": "/frostyx-vk/shop/static/js/main.3b7d2ac5.js.map"
   },
   "entrypoints": [
     "static/css/main.3482a1ad.css",
