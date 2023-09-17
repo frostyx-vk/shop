@@ -1,6 +1,6 @@
 {
-  "short_name": "Shop on React",
-  "name": "Shop on React",
+  "short_name": "shop",
+  "name": "shop",
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
