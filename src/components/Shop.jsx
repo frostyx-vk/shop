@@ -41,6 +41,35 @@ function Shop() {
     setOrder(newOrder);
   }
 
+  const incQuantity = (mainId) => {
+    const newOrder = order.map(el => {
+      if (el.mainId === mainId) {
+        const newQuantity = el.quantity + 1;
+        return {
+          ...el,
+          quantity: newQuantity >= 0 ? newQuantity : 0,
+        }
+      } else {
+        return el
+      }
+    });
+    setOrder(newOrder);
+  }
+  const decQuantity = (mainId) => {
+    const newOrder = order.map(el => {
+      if (el.mainId === mainId) {
+        const newQuantity = el.quantity - 1;
+        return {
+          ...el,
+          quantity: newQuantity,
+        }
+      } else {
+        return el
+      }
+    });
+    setOrder(newOrder);
+  }
+
   const handleBasketShow = () => {
     setBasketShow(!isBasketShow);
   }
