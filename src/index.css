@@ -93,3 +93,8 @@ code {
     opacity: 1;
   }
 }
+.basket-quantity{
+  vertical-align: middle;
+  cursor: pointer;
+  color: #26a69a;
+}

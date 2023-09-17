@@ -47,7 +47,7 @@ function Shop() {
         const newQuantity = el.quantity + 1;
         return {
           ...el,
-          quantity: newQuantity >= 0 ? newQuantity : 0,
+          quantity: newQuantity,
         }
       } else {
         return el
@@ -61,7 +61,7 @@ function Shop() {
         const newQuantity = el.quantity - 1;
         return {
           ...el,
-          quantity: newQuantity,
+          quantity: newQuantity >= 0 ? newQuantity : 0,
         }
       } else {
         return el
@@ -91,7 +91,7 @@ function Shop() {
     <main className="container content">
       <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
       {loading ? <Preloader /> : <GoodsList goods={goods} addToCart={addToCart} />}
-      {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} removeFromCart={removeFromCart}/>}
+      {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} removeFromCart={removeFromCart} incQuantity={incQuantity} decQuantity={decQuantity}/>}
     </main>
   );
 }
