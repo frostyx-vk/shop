@@ -1,9 +1,9 @@
 import { BasketItem } from "./BasketItem";
 
 function BasketList(props) {
-    const { 
-        order = [], 
-        handleBasketShow = Function.prototype, 
+    const {
+        order = [],
+        handleBasketShow = Function.prototype,
         removeFromCart = Function.prototype,
         incQuantity = Function.prototype,
         decQuantity = Function.prototype,
@@ -18,16 +18,20 @@ function BasketList(props) {
             <li className="collection-item active">Корзина</li>
             {
                 order.length ? order.map(item => (
-                    <BasketItem 
-                    key={item.mainId} {...item} 
-                    handleBasketShow={handleBasketShow} 
-                    removeFromCart={removeFromCart} 
-                    incQuantity={incQuantity} 
-                    decQuantity={decQuantity}
+                    <BasketItem
+                        key={item.mainId} {...item}
+                        handleBasketShow={handleBasketShow}
+                        removeFromCart={removeFromCart}
+                        incQuantity={incQuantity}
+                        decQuantity={decQuantity}
                     />
                 )) : <li className="collection-item">Корзина пуста</li>
             }
-            <li className="collection-item active">Общая стоимость: {totalPrice} руб.</li>
+            <li className="collection-item active">Общая стоимость: {totalPrice} руб.
+                <button className="secondary-content btn btn-small">
+                    Оформить
+                </button>
+            </li>
             <i onClick={handleBasketShow} className="material-icons basket-close">close</i>
         </ul>
     )
