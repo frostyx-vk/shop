@@ -10,7 +10,7 @@ function Shop() {
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
-  const [isBasketShow, setBasketShow] = useState([false]);
+  const [isBasketShow, setBasketShow] = useState(false);
 
   const addToCart = (item) => {
     const itemIndex = order.findIndex(orderItem => orderItem.mainId === item.mainId)
