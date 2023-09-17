@@ -5,13 +5,14 @@ import { Preloader } from "./Preloader";
 import { GoodsList } from "./GoodsList";
 import { Cart } from "./Cart";
 import { BasketList } from "./BasketList";
+import { Alert } from "./Alert";
 
 function Shop() {
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([]);
   const [isBasketShow, setBasketShow] = useState(false);
-  const [alertAnme, setAlertName] = useState('')
+  const [alertName, setAlertName] = useState('')
 
   const addToCart = (item) => {
     const itemIndex = order.findIndex(orderItem => orderItem.mainId === item.mainId)
@@ -34,7 +35,9 @@ function Shop() {
       })
 
       setOrder(newOrder);
-    }
+    };
+
+    setAlertName(item.displayName)
   }
 
   const removeFromCart = (mainId) => {
@@ -95,8 +98,21 @@ function Shop() {
   return (
     <main className="container content">
       <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
-      {loading ? <Preloader /> : <GoodsList goods={goods} addToCart={addToCart} />}
-      {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} removeFromCart={removeFromCart} incQuantity={incQuantity} decQuantity={decQuantity}/>}
+      {
+        loading ?
+          <Preloader /> : <GoodsList goods={goods} addToCart={addToCart} />
+      }
+      {
+        isBasketShow &&
+        <BasketList order={order}
+          handleBasketShow={handleBasketShow}
+          removeFromCart={removeFromCart}
+          incQuantity={incQuantity}
+          decQuantity={decQuantity} />
+      }
+      {
+        alertName && <Alert name={alertName} closeAlert={closeAlert}/>
+      }
     </main>
   );
 }
