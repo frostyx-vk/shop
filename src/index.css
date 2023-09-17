@@ -70,6 +70,7 @@ code {
   background: #fff;
   max-width: 95%;
   width: 50rem;
+  animation: show 500ms ease-in-out;
 }
 .basket-close{
   cursor: pointer;
@@ -80,4 +81,15 @@ code {
 }
 .material-icons{
   cursor: pointer;
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
