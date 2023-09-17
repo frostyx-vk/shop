@@ -57,7 +57,7 @@ function Shop() {
     <main className="container content">
       <Cart quantity={order.length} handleBasketShow={handleBasketShow} />
       {loading ? <Preloader /> : <GoodsList goods={goods} addToCart={addToCart} />}
-      {isBasketShow && <BasketList order={order} />}
+      {isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} />}
     </main>
   );
 }

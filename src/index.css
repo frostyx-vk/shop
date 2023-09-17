@@ -71,3 +71,13 @@ code {
   max-width: 95%;
   width: 50rem;
 }
+.basket-close{
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #fff;
+}
+.material-icons{
+  cursor: pointer;
+}
